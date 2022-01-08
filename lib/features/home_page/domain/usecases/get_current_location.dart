@@ -1,6 +1,6 @@
 import 'package:app_food/features/home_page/domain/entities/location.dart';
 import 'package:app_food/features/home_page/domain/errors/location_error.dart';
-import 'package:app_food/features/home_page/domain/repositories/home_page_repository.dart';
+import 'package:app_food/features/home_page/domain/repositories/home_repository.dart';
 import 'package:dartz/dartz.dart';
 
 abstract class IGetCurrentLocation {
@@ -8,7 +8,7 @@ abstract class IGetCurrentLocation {
 }
 
 class GetCurrentLocation implements IGetCurrentLocation {
-  final HomePageRepository repository;
+  final HomeRepository repository;
 
   GetCurrentLocation({required this.repository});
   @override

@@ -1,6 +1,6 @@
 import 'package:app_food/features/home_page/domain/entities/location.dart';
 import 'package:app_food/features/home_page/domain/errors/location_error.dart';
-import 'package:app_food/features/home_page/domain/repositories/home_page_repository.dart';
+import 'package:app_food/features/home_page/domain/repositories/home_repository.dart';
 import 'package:app_food/features/home_page/domain/usecases/get_current_location.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -80,4 +80,4 @@ void main() {
   });
 }
 
-class HomePageRepositoryMock extends Mock implements HomePageRepository {}
+class HomePageRepositoryMock extends Mock implements HomeRepository {}

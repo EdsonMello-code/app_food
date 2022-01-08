@@ -1,13 +1,13 @@
 import 'package:app_food/features/home_page/domain/errors/location_error.dart';
 import 'package:app_food/features/home_page/domain/entities/location.dart';
-import 'package:app_food/features/home_page/domain/repositories/home_page_repository.dart';
-import 'package:app_food/features/home_page/infra/datasources/home_page_datasource.dart';
+import 'package:app_food/features/home_page/domain/repositories/home_repository.dart';
+import 'package:app_food/features/home_page/infra/datasources/home_datasource.dart';
 import 'package:dartz/dartz.dart';
 
-class HomePageRepositoryImpl implements HomePageRepository {
-  final HomePageDatasource datasource;
+class HomeRepositoryImpl implements HomeRepository {
+  final HomeDatasource datasource;
 
-  const HomePageRepositoryImpl({required this.datasource});
+  const HomeRepositoryImpl({required this.datasource});
   @override
   Future<Either<LocationFailure, LocationEntity>> getLocation() async {
     try {
