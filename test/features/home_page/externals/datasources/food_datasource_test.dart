@@ -6,7 +6,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
 void main() {
-  group('Food datasource: ', () {
+  group('Food datasource category: ', () {
     test(
         'Should return list of category then the method getFoodByCategoryDatasource.',
         () async {

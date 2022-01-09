@@ -21,7 +21,6 @@ class FoodModel implements Food {
   });
 
   factory FoodModel.fromMap(Map map) {
-    print(map);
     return FoodModel(
       distances: map['distances'],
       imageUrl: map['imageUrl'],
