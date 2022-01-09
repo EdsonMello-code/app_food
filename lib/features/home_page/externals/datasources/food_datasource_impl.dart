@@ -1,6 +1,6 @@
 import 'package:app_food/features/home_page/domain/entities/category.dart';
 import 'package:app_food/features/home_page/domain/errors/food_error.dart';
-import 'package:app_food/features/home_page/externals/http_client/my_client_http.dart';
+import 'package:app_food/features/home_page/externals/adapters/http_client/my_client_http.dart';
 import 'package:app_food/features/home_page/externals/models/category_model.dart';
 import 'package:app_food/features/home_page/infra/datasources/food_datasource.dart';
 

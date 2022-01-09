@@ -1,6 +1,6 @@
 import 'package:app_food/features/home_page/domain/entities/location.dart';
 import 'package:app_food/features/home_page/domain/errors/location_error.dart';
-import 'package:app_food/features/home_page/externals/geocoding_adpter.dart';
+import 'package:app_food/features/home_page/externals/adapters/geocoding_adapter.dart';
 import 'package:app_food/features/home_page/infra/datasources/location_datasource.dart';
 import 'package:location/location.dart';
 

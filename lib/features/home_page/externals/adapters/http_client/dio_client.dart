@@ -1,4 +1,4 @@
-import 'package:app_food/features/home_page/externals/http_client/my_client_http.dart';
+import 'package:app_food/features/home_page/externals/adapters/http_client/my_client_http.dart';
 import 'package:dio/dio.dart';
 
 class DioClient implements MyClientHttp<Dio> {
