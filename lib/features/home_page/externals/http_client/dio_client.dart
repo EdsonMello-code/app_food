@@ -3,7 +3,9 @@ import 'package:dio/dio.dart';
 
 class DioClient implements MyClientHttp<Dio> {
   @override
-  Dio get client => Dio();
+  final Dio client;
+
+  const DioClient(this.client);
 
   @override
   Future<dynamic> get({required String url}) async {
