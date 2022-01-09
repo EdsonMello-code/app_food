@@ -1,7 +1,7 @@
 import 'package:app_food/features/home_page/domain/entities/location.dart';
 import 'package:app_food/features/home_page/domain/errors/location_error.dart';
-import 'package:app_food/features/home_page/infra/datasources/home_datasource.dart';
-import 'package:app_food/features/home_page/infra/repositories/home_repository_impl.dart';
+import 'package:app_food/features/home_page/infra/datasources/location_datasource.dart';
+import 'package:app_food/features/home_page/infra/repositories/location_repository_impl.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
@@ -65,4 +65,4 @@ void main() {
   });
 }
 
-class HomeDatasourceMock extends Mock implements HomeDatasource {}
+class HomeDatasourceMock extends Mock implements LocationDatasource {}

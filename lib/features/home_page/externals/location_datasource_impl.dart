@@ -1,14 +1,14 @@
 import 'package:app_food/features/home_page/domain/entities/location.dart';
 import 'package:app_food/features/home_page/domain/errors/location_error.dart';
 import 'package:app_food/features/home_page/externals/geocoding_adpter.dart';
-import 'package:app_food/features/home_page/infra/datasources/home_datasource.dart';
+import 'package:app_food/features/home_page/infra/datasources/location_datasource.dart';
 import 'package:location/location.dart';
 
-class HomeDatasourceImpl implements HomeDatasource {
+class LocationDatasourceImpl implements LocationDatasource {
   final Location location;
   final GeocodingAdpter geocoding;
 
-  HomeDatasourceImpl({required this.location, required this.geocoding});
+  LocationDatasourceImpl({required this.location, required this.geocoding});
 
   @override
   Future<LocationEntity> geCurrentLocation() async {

@@ -38,6 +38,7 @@ dependencies:
   location: ^4.3.0
   geocoding: ^2.0.1 
   mocktail: ^0.2.0
+  dio: ^4.0.4
   
 
 

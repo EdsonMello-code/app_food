@@ -1,6 +1,6 @@
 import 'package:app_food/features/home_page/domain/entities/location.dart';
 import 'package:app_food/features/home_page/domain/errors/location_error.dart';
-import 'package:app_food/features/home_page/domain/repositories/home_repository.dart';
+import 'package:app_food/features/home_page/domain/repositories/location_repository.dart';
 import 'package:app_food/features/home_page/domain/usecases/get_current_location.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -9,10 +9,10 @@ import 'package:mocktail/mocktail.dart';
 void main() {
   group("Get current location usecase: ", () {
     test('Should has location with latitude, longitude and city ', () async {
-      final homePageRepositoryMock = HomePageRepositoryMock();
+      final locationRepositoryMock = LocationRepositoryMock();
 
       final getCurrentLocation = GetCurrentLocation(
-        repository: homePageRepositoryMock,
+        repository: locationRepositoryMock,
       );
 
       Future<Either<LocationFailure, LocationEntity>>
@@ -29,7 +29,7 @@ void main() {
       }
 
       when(() {
-        return homePageRepositoryMock.getLocation();
+        return locationRepositoryMock.getLocation();
       }).thenAnswer((invocation) {
         return getLocationEntity();
       });
@@ -50,10 +50,10 @@ void main() {
     test(
         'Should have error then return error of get latitude, longitude and city',
         () async {
-      final homePageRepositoryMock = HomePageRepositoryMock();
+      final locationRepositoryMock = LocationRepositoryMock();
 
       final getCurrentLocation = GetCurrentLocation(
-        repository: homePageRepositoryMock,
+        repository: locationRepositoryMock,
       );
 
       Future<Either<LocationFailure, LocationEntity>>
@@ -68,7 +68,7 @@ void main() {
       }
 
       when(() {
-        return homePageRepositoryMock.getLocation();
+        return locationRepositoryMock.getLocation();
       }).thenAnswer((invocation) {
         return getLocationEntity();
       });
@@ -80,4 +80,4 @@ void main() {
   });
 }
 
-class HomePageRepositoryMock extends Mock implements HomeRepository {}
+class LocationRepositoryMock extends Mock implements LocationRepository {}

@@ -1,11 +1,11 @@
 import 'package:app_food/features/home_page/domain/errors/location_error.dart';
 import 'package:app_food/features/home_page/domain/entities/location.dart';
-import 'package:app_food/features/home_page/domain/repositories/home_repository.dart';
-import 'package:app_food/features/home_page/infra/datasources/home_datasource.dart';
+import 'package:app_food/features/home_page/domain/repositories/location_repository.dart';
+import 'package:app_food/features/home_page/infra/datasources/location_datasource.dart';
 import 'package:dartz/dartz.dart';
 
-class HomeRepositoryImpl implements HomeRepository {
-  final HomeDatasource datasource;
+class HomeRepositoryImpl implements LocationRepository {
+  final LocationDatasource datasource;
 
   const HomeRepositoryImpl({required this.datasource});
   @override

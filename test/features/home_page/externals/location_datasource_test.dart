@@ -1,5 +1,5 @@
 import 'package:app_food/features/home_page/externals/geocoding_adpter.dart';
-import 'package:app_food/features/home_page/externals/home_datasource_impl.dart';
+import 'package:app_food/features/home_page/externals/location_datasource_impl.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:geocoding/geocoding.dart' hide Location;
 import 'package:mocktail/mocktail.dart';
@@ -13,7 +13,7 @@ void main() {
       final geocodingAdapterMock = GeocodingAdapterMock();
       final locationMock = LocationMock();
 
-      final homeDatasource = HomeDatasourceImpl(
+      final homeDatasource = LocationDatasourceImpl(
         location: locationMock,
         geocoding: geocodingAdapterMock,
       );
