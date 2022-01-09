@@ -1,5 +1,5 @@
 import 'package:app_food/features/home_page/domain/entities/category.dart';
-import 'package:app_food/features/home_page/externals/http_client/models/food_model.dart';
+import 'package:app_food/features/home_page/externals/models/food_model.dart';
 
 class CategoryModel implements Category {
   @override
